@@ -22,11 +22,11 @@
 		<!-- <constructor-arg value="1065" type="java.lang.String" /> -->
 		<!-- <constructor-arg value="28" type="int"/> -->
 		<property name="employeeName" value="gianfranco stolfa" />
-		
-<!-- 		se voglio settare un valore nullo: -->
-<!-- 		<property name="employeeName" > -->
-<!-- 			<null/> -->
-<!-- 		</property> -->
+
+		<!-- se voglio settare un valore nullo: -->
+		<!-- <property name="employeeName" > -->
+		<!-- <null/> -->
+		<!-- </property> -->
 
 		<property name="lists">
 			<list>
@@ -60,10 +60,20 @@
 	<bean id="atmBean" class="org.springframework.chapter2.setterinjection.ATM">
 		<property name="printer">
 			<bean class="org.springframework.chapter2.setterinjection.Printer">
-				<property name="message" value="The balance information is printed by Printer for the account number"/>
+				<property name="message"
+					value="The balance information is printed by Printer for the account number" />
 			</bean>
 		</property>
 	</bean>
 
+	<!-- beaninheritance example -->
+	<bean id="indianEmployee" class="org.springframework.chapter2.beaninheritance.Employee">
+		<property name="country" value="India"/>
+	</bean>
+	
+	<bean id="employeeBean" parent="indianEmployee">
+		<property name="employeeId" value="1065"></property>
+		<property name="employeeName" value="Ravi Kant Soni"></property>
+	</bean>
 
 </beans>

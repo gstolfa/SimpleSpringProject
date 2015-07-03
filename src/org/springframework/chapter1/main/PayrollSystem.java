@@ -9,9 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class PayrollSystem {
 
+	private static ApplicationContext context;
+
 	public static void main(String...args){
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		context = new ClassPathXmlApplicationContext("beans.xml");
 		
 		EmployeeService employeeService = context.getBean("employeeService", EmployeeServiceImpl.class); 
 		
@@ -24,6 +26,13 @@ public class PayrollSystem {
 		System.out.println(employeeService.generateEmployeeId());
 
 		System.out.println(employee.toString());
+		
+		// beaninheritance example
+		// using 'indianEmployee'
+		org.springframework.chapter2.beaninheritance.Employee employeeBean = context.getBean("employeeBean", org.springframework.chapter2.beaninheritance.Employee.class);
+		org.springframework.chapter2.beaninheritance.Employee indianEmployee = context.getBean("indianEmployee", org.springframework.chapter2.beaninheritance.Employee.class);
+		System.out.println(employeeBean.toString());
+		System.out.println(indianEmployee.toString());
 		
 		
 	}
