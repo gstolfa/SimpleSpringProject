@@ -30,19 +30,19 @@
 
 		<property name="lists">
 			<list>
-				<value>Gianfranco Stolfa</value>
-				<value>Linda Carbonaro</value>
-				<value>Mattia Stolfa</value>
-				<value>Nicole Stolfa</value>
+				<value>Gianfranco</value>
+				<value>Linda</value>
+				<value>Mattia</value>
+				<value>Nicole</value>
 			</list>
 		</property>
 
 		<property name="sets">
 			<set>
-				<value>Gianfranco Stolfa</value>
-				<value>Linda Carbonaro</value>
-				<value>Mattia Stolfa</value>
-				<value>Nicole Stolfa</value>
+				<value>Gianfranco</value>
+				<value>Linda</value>
+				<value>Mattia</value>
+				<value>Nicole</value>
 			</set>
 		</property>
 
