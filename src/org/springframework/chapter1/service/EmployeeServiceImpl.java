@@ -26,4 +26,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Long generateEmployeeId() {
 		return System.currentTimeMillis();
 	}
+
+	@Override
+	public EmployeeDao getEmployeeDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
