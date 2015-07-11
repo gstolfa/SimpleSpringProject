@@ -6,7 +6,8 @@
 
 	<context:component-scan base-package="org.springframework.chapter1.service" />
 
-	<!-- <bean id="ciccio" class="org.springframework.chapter1.service.GreetingMessageServiceImpl"/> -->
+	<!-- <bean id="greeting" class="org.springframework.chapter1.service.GreetingMessageServiceImpl"/> -->
+
 
 	<bean id="employeeService"
 		class="org.springframework.chapter1.service.EmployeeServiceImpl">

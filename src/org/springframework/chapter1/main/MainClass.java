@@ -13,7 +13,7 @@ public class MainClass {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		
 		GreetingMessageService greetingMessageService = context.getBean("greetingMessageServiceImpl", GreetingMessageService.class);
-//		GreetingMessageService greetingMessageService = (GreetingMessageService)context.getBean("ciccio");
+//		GreetingMessageService greetingMessageService = (GreetingMessageService)context.getBean("greeting");
 
 		
 		System.out.println(greetingMessageService.greetUser());
