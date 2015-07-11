@@ -67,7 +67,7 @@
 	</bean>
 
 	<!-- beaninheritance example -->
-	<bean id="indianEmployee" class="org.springframework.chapter2.beaninheritance.Employee">
+	<bean id="indianEmployee" class="org.springframework.chapter2.beaninheritance.Employee" abstract="true">
 		<property name="country" value="India"/>
 	</bean>
 	

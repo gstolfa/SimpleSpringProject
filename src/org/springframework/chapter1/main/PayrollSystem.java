@@ -29,10 +29,17 @@ public class PayrollSystem {
 		
 		// beaninheritance example
 		// using 'indianEmployee'
-		org.springframework.chapter2.beaninheritance.Employee employeeBean = context.getBean("employeeBean", org.springframework.chapter2.beaninheritance.Employee.class);
-		org.springframework.chapter2.beaninheritance.Employee indianEmployee = context.getBean("indianEmployee", org.springframework.chapter2.beaninheritance.Employee.class);
+		org.springframework.chapter2.beaninheritance.Employee employeeBean = 
+				context.getBean("employeeBean", org.springframework.chapter2.beaninheritance.Employee.class);
+		
+		// Since the indianEmployee bean is a pure template, if you try to instantiate it, you
+		// will encounter the following error message:
+		// org.springframework.beans.factory.BeanIsAbstractException.
+		// bean defined as abstract="true"
+		//		org.springframework.chapter2.beaninheritance.Employee indianEmployee = 
+		//				context.getBean("indianEmployee", org.springframework.chapter2.beaninheritance.Employee.class);
+		
 		System.out.println(employeeBean.toString());
-		System.out.println(indianEmployee.toString());
 		
 		
 	}
